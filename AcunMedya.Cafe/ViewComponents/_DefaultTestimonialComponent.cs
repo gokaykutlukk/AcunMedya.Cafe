@@ -3,20 +3,21 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AcunMedya.Cafe.ViewComponents
 {
-    public class _DeafultFeatureComponentPartial:ViewComponent
+    public class _DefaultTestimonialComponent : ViewComponent
     {
         private readonly CafeContext _context;
 
-        public _DeafultFeatureComponentPartial(CafeContext context)
+        public _DefaultTestimonialComponent(CafeContext context)
         {
             _context = context;
         }
 
         public IViewComponentResult Invoke()
         {
-            var values = _context.Features.ToList();
-            ViewBag.Subtitle = _context.Features.Select(x => x.SubTitle).FirstOrDefault();
+
+            var values = _context.Testimonials.ToList();
             return View(values);
         }
+
     }
 }
