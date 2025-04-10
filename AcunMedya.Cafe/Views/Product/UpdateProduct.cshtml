@@ -1,15 +1,17 @@
 ﻿@model AcunMedya.Cafe.Entities.Product
 @{
-    ViewData["Title"] = "AddProduct";
+    ViewData["Title"] = "UpdateProduct";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
+<h1>UpdateProduct</h1>
+
 <div class="content-wrapper">
     <div class="page-header">
-        <h3 class="page-title"> Ürün Ekleme Sayfası </h3>
+        <h3 class="page-title"> Ürün Güncelleme Sayfası </h3>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Ekleme İşlemi</a></li>
+                <li class="breadcrumb-item"><a href="#">Günceleme İşlemi</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Ürün</li>
             </ol>
         </nav>
@@ -19,11 +21,14 @@
             <div class="card">
                 <div class="card-body">
                     <form method="post" enctype="multipart/form-data">
+                        <input type="hidden" asp-for="ProductId" />
                         <label>Ürün Adı</label>
                         <input type="text" asp-for="ProductName" class="form-control" />
                         <br />
                         <label>Ürün Görseli</label>
+                        <img src="@Model.ImageUrl" style="height:75px;width:75px" />
                         <input type="file" asp-for="ImageFile" class="form-control" />
+                        <input type="hidden" asp-for="ImageUrl" class="form-control" />
                         <br />
                         <label>Ürün Fiyatı</label>
                         <input type="text" asp-for="Price" class="form-control" />
@@ -35,7 +40,7 @@
                         <select asp-for="CategoryId" asp-items="@ViewBag.v" class="form-control">
                             <option>Kategori Seçiniz</option>
                         </select>
-                       
+
                         <button class="btn btn-primary"> <i class="fa fa-save"> </i>  Kaydet </button>
                     </form>
                 </div>
