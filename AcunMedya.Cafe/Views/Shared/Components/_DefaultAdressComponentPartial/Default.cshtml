@@ -1,0 +1,24 @@
+﻿@model List<AcunMedya.Cafe.Entities.Adress>
+
+<div class="header-top">
+	<div class="container">
+		<div class="row justify-content-end">
+			@foreach (var item in Model)
+			{
+				<div class="col-lg-8 col-sm-4 col-8 header-top-right no-padding">
+					<ul>
+						<li>
+							Hafta içi: @item.WeekdayHours
+						</li>
+						<li>
+							Hafta sonu: @item.WeekendHours
+						</li>
+						<li>
+							<a href="tel:@item.Phone">@item.Phone</a>
+						</li>
+					</ul>
+				</div>
+			}
+		</div>
+	</div>
+</div>

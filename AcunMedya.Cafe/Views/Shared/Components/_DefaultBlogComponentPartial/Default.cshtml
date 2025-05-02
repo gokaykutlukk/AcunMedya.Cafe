@@ -1,0 +1,30 @@
+﻿@model List<AcunMedya.Cafe.Entities.Blog>
+
+<section class="blog-area section-gap" id="blog">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-60 col-lg-10">
+                <div class="title text-center">
+                    <h1 class="mb-10">Kahve Blog</h1>
+                    @*    <p>Who are in extremely love with eco friendly system.</p>*@
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 single-blog" style="margin-bottom: 30px; padding: 10px;">
+                    <img class="img-fluid blog-image" src="@item.ImageUrl" alt="" style="width: 100%; height: 250px; object-fit: cover; margin-bottom: 20px;">
+                    <ul class="post-tags" style="list-style: none; padding: 0; margin-bottom: 10px;">
+                        <li>Seyahat</li>
+                        <li>Yaşam Stili</li>
+                    </ul>
+                    <a href="#"><h4>@item.Title</h4></a>
+                    <p>@item.Description</p>
+                    <p class="post-date" style="font-size: 14px; color: #777; margin-top: 10px;">@item.Time.ToString("dd MMMM yyyy")</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
