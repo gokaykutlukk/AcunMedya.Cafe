@@ -1,0 +1,58 @@
+﻿﻿
+@model List<AcunMedya.Cafe.Entities.Adress>
+
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title"> Adres Tablsou </h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Tablo</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Adres</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Hafta içi Saati</th>
+                                <th>Hafta Sonu Saati</th>
+                                <th>Telefon</th>
+                                <th>Güncelle</th>
+                                <th>Sil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.AdressId</td>
+                                    <td>@item.WeekdayHours</td>
+                                    <td>@item.WeekendHours</td>
+                                    <td><a href="/Admin/Adress/UpdateAdress/@item.AdressId" class="badge badge-info">Güncelle</a></td>
+                                    <td><a href="/Admin/Adress/DeleteAdress/@item.AdressId" class="badge badge-danger">Sil</a></td>
+                                </tr>
+                            }
+
+
+                        </tbody>
+                    </table>
+                    <br />
+                    <a href="/Admin/Adress/AddAdress" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Adress Ekle</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

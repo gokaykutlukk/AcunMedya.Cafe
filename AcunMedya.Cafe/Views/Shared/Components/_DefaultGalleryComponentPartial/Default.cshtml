@@ -3,34 +3,43 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center mb-5">
-                <h1 class="mb-3">Görsel Şölen: Kafemizin Anları</h1>
-                <p class="text-muted">Kahvede Sanat, Damakta Şölen!</p>
+                <h1 class="mb-3">"Estetik ve Anılar: Görsellerle Yolculuk"</h1>
+                <p class="text-muted">Her Karede Tat, Her Yudumda Sanat</p>
             </div>
         </div>
 
         <div class="row">
-            @* İlk 2 büyük resim *@
-            @for (int i = 0; i < 2 && i < Model.Count; i++)
-            {
-                <div class="col-lg-6 col-md-6 mb-4">
-                    <a href="@Model[i].Photo" class="img-pop-home">
-                        <img src="@Model[i].Photo" class="img-fluid w-100" alt="Gallery Image" style="height: 400px; object-fit: cover; border-radius: 8px;">
-                    </a>
-                </div>
+            @{
+                var firstTwoPhotos = Model.Take(2).ToList();
+                var nextThreePhotos = Model.Skip(2).Take(3).ToList();
             }
-        </div>
 
-        <div class="row">
-            @* Sonraki 3 küçük resim *@
-            @for (int i = 2; i < 5 && i < Model.Count; i++)
-            {
-                <div class="col-lg-4 col-md-4 mb-4">
-                    <a href="@Model[i].Photo" class="img-pop-home">
-                        <img src="@Model[i].Photo" class="img-fluid w-100" alt="Gallery Image" style="height: 250px; object-fit: cover; border-radius: 8px;">
-                    </a>
-                </div>
-            }
-        </div>
+            <div class="row">
+                @* İlk 2 büyük resim *@
+                @foreach (var photo in firstTwoPhotos)
+                {
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <a href="@photo.Photo" class="img-pop-home">
+                            <img src="@photo.Photo" class="img-fluid w-100" alt="Gallery Image"
+                                 style="height: 400px; object-fit: cover; border-radius: 8px;">
+                        </a>
+                    </div>
+                }
+            </div>
+
+            <div class="row">
+                @* Sonraki 3 küçük resim *@
+                @foreach (var photo in nextThreePhotos)
+                {
+                    <div class="col-lg-4 col-md-4 mb-4">
+                        <a href="@photo.Photo" class="img-pop-home">
+                            <img src="@photo.Photo" class="img-fluid w-100" alt="Gallery Image"
+                                 style="height: 250px; object-fit: cover; border-radius: 8px;">
+                        </a>
+                    </div>
+                }
+            </div>
+
     </div>
 </section>
 

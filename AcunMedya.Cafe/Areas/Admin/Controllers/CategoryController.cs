@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AcunMedya.Cafe.Areas.Area.Controllers
 {
-    [Area("Area")]
+    [Area("Admin")]
     public class CategoryController : Controller
     {
         

@@ -1,0 +1,29 @@
+﻿@model List<AcunMedya.Cafe.Entities.About>
+
+<link href="c:\acunmedya.cafe\wwwroot\coffee-master\css\bootstrap.css" rel="stylesheet" />
+@foreach (var x in Model)
+{
+	<section class="video-sec-area pb-100 pt-40" id="about">
+		<div class="container">
+			<div class="row justify-content-start align-items-center">
+				<div class="col-lg-6 video-right justify-content-center align-items-center d-flex">
+					<div class="overlay overlay-bg"></div>
+					<a class="play-btn" href="@x.VideoUrl"><img class="img-fluid" src="@x.ImageUrl" alt=""></a>
+
+				</div>
+				<div class="col-lg-6 video-left">
+					<h6>@x.SubTitle</h6>
+					<h1>
+						@x.ShortDescription <br>
+
+					</h1>
+					<p><span>@x.Title</span></p>
+					<p>
+						@x.Description
+					</p>
+					<img class="img-fluid" src="/images/kahveblog2.jpeg/" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+}

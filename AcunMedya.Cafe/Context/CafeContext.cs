@@ -22,6 +22,7 @@ namespace AcunMedya.Cafe.Context
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Admin> Admins { get; set; }
 
     }
 }
