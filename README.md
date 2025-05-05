@@ -61,10 +61,28 @@ Bu proje **Murat Yücedağ** koordinatörlüğünde, **Buse Nur Demirbaş** eği
 
 ## 📷 Ekran Görüntüleri
 
-> 📌 *Ekran görüntülerini buraya eklemeyi unutma* (örnek: `/screenshots/homepage.png`) <br/>
-
+📌 ![Ekran görüntüsü 2025-05-05 224720](https://github.com/user-attachments/assets/275a6a8d-04dd-4622-a440-c25e85f6321c)
+<br/>
+📌 ![Ekran görüntüsü 2025-05-05 224736](https://github.com/user-attachments/assets/6f101e02-3ff2-4ab7-8c30-a3a99d47819a)
+<br/>
+📌 ![Ekran görüntüsü 2025-05-05 224749](https://github.com/user-attachments/assets/36c595dd-4d98-4594-90ee-40fbd6570456)
+<br/>
+📌 ![Ekran görüntüsü 2025-05-05 224810](https://github.com/user-attachments/assets/153ce77d-3dd5-42e3-a068-495a0c5d4b32)
+<br/>
+📌 ![Ekran görüntüsü 2025-05-05 224821](https://github.com/user-attachments/assets/e2d25011-70c4-4e00-84e1-eec365ceefb3)
+<br/>
+📌 ![Ekran görüntüsü 2025-05-05 224850](https://github.com/user-attachments/assets/a89025a7-c5e8-4cfb-b6b5-d7ba108c437d)
+<br/>
+📌 ![Ekran görüntüsü 2025-05-05 224905](https://github.com/user-attachments/assets/58947a86-59a1-42d7-b997-de8d7a025ba8)
+<br/>
+📌 ![Ekran görüntüsü 2025-05-05 224931](https://github.com/user-attachments/assets/01fd654a-5b69-4b8a-b55c-61023f89c23f)
+<br/>
+📌 ![Ekran görüntüsü 2025-05-05 224947](https://github.com/user-attachments/assets/9217f1c9-7e2b-49aa-bc83-87e3aef93ddd)
+<br/>
+📌 ![Ekran görüntüsü 2025-05-05 225023](https://github.com/user-attachments/assets/aa6fb7cd-f069-4f97-a367-27b08d76b971)
+<br/>
 ---
 
 ## 📞 İletişim
-
+www.linkedin.com/in/gökaykutluk <br/>
 Her türlü geri bildirim ve öneri için benimle GitHub üzerinden iletişime geçebilirsiniz. 💬
