@@ -67,18 +67,16 @@
 - `PresentationLayer`: Kullanıcıya gösterilen arayüz (MVC) <br/>
 
 ---
+### 🚀 Kurulum (Local)
 
-## 📌 Amaç
+> .NET bilgisi olan geliştiriciler için hızlı başlangıç:
 
-Bu proje, gerçek dünya senaryolarında kullanılabilecek bir kafe tanıtım platformu oluşturmak ve .NET Core mimarisine hâkimiyeti geliştirmek amacıyla yapılmıştır. <br/>
-Kullanıcılar için şık bir arayüz, geliştiriciler için ise okunabilir ve sürdürülebilir bir mimari hedeflenmiştir. <br/>
+```bash
+git clone https://github.com/kullaniciadi/AcunMedyaCafe.git
+cd AcunMedyaCafe
+dotnet restore
+dotnet run
 
----
-
-## 🧑‍🏫 Eğitmen & Katkı
-
-Bu proje **Murat Yücedağ** koordinatörlüğünde, **Buse Nur Demirbaş** eğitmenliğinde gerçekleştirilmiştir. <br/>
-**AcunMedyaAkademi** bünyesinde geliştirilmiş olup, öğrenim sürecini uygulamalı şekilde pekiştirmeyi amaçlamaktadır.
 
 ---
 
