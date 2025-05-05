@@ -66,19 +66,6 @@
 - `BusinessLayer`: İş kuralları ve servis yapısı <br/>
 - `PresentationLayer`: Kullanıcıya gösterilen arayüz (MVC) <br/>
 
----
-### 🚀 Kurulum (Local)
-
-> .NET bilgisi olan geliştiriciler için hızlı başlangıç:
-
-```bash
-git clone https://github.com/kullaniciadi/AcunMedyaCafe.git
-cd AcunMedyaCafe
-dotnet restore
-dotnet run
-
-
----
 
 ## 📷 Ekran Görüntüleri
 
