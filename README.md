@@ -63,7 +63,7 @@
 
 - `Entities`: Veritabanı modelleri <br/>
 - `Controllers`: Kullanıcıdan gelen istekleri yönetiyor<br/>
-- `Entities`:  Veri modelleri burada tutuluyor <br/>
+- `Program.cs`:  Uygulamanın giriş noktasıdır <br/>
 - `PresentationLayer`: Kullanıcıya gösterilen arayüz (MVC) <br/>
 
 
