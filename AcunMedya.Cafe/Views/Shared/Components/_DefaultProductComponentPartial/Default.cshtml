@@ -1,34 +1,55 @@
 ﻿@model List<AcunMedya.Cafe.Entities.Product>
-<section class="menu-area section-gap" id="coffee">
-	<div class="container">
-		<div class="row d-flex justify-content-center">
-			<div class="menu-content pb-60 col-lg-10">
-				<div class="title text-center">
-					<h1 class="mb-10">Sizin için ne tür kahve servis ediyoruz</h1>
-					<p>Aradığınız kahveler işte burada</p>
-				</div>
-			</div>
-		</div>
-		<div class="row">
+
+@{
+    ViewData["Title"] = "Kahve Menüsü";
+}
+
+<section class="menu-area py-5 bg-light" id="coffee">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold text-dark">Size Özel Kahve Seçenekleri</h1>
+            <p class="lead text-secondary">Her yudumda bir hikâye, her tatta bir deneyim var. Favorini keşfet!</p>
+            <hr class="w-25 mx-auto border-3 border-dark opacity-75" />
+        </div>
+
+        <div class="row g-4">
             @foreach (var item in Model)
             {
-                <div class="col-lg-4">
-                    <div class="single-menu">
-                        <div class="title-div justify-content-between d-flex">
-                            <h4>@item.Category.CategoryName</h4>
-                            <h4>@item.ProductName</h4>
-                            <p class="price float-right">
-                                @item.Price
-                            </p>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card border-0 h-100 shadow-lg rounded-4 hover-zoom overflow-hidden">
+                        <img src="@item.ImageUrl" class="card-img-top" alt="@item.ProductName" style="height: 250px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column p-4">
+                            <h5 class="card-title fw-semibold text-dark">@item.ProductName</h5>
+                            <span class="badge bg-success mb-2 align-self-start px-3 py-1">@item.Price ₺</span>
+                            <p class="mb-1 text-muted"><i class="bi bi-tags"></i> @item.Category.CategoryName</p>
+                            <p class="text-secondary flex-grow-1">@item.Description</p>
+                            <a href="#" class="btn btn-dark w-100 mt-3 rounded-pill shadow-sm">Detayları Gör</a>
                         </div>
-                        <p>
-                            @item.Description
-                        </p>
                     </div>
                 </div>
-            }
-			
+            } 
+           
 
-		</div>
-	</div>
+        </div>
+    </div>
 </section>
+
+<style>
+    .hover-zoom {
+        transition: transform 0.3s ease;
+    }
+
+        .hover-zoom:hover {
+            transform: scale(1.03);
+        }
+
+    .card-img-top {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+
+    .card-body {
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+</style>

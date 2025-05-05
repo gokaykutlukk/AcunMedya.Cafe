@@ -1,62 +1,74 @@
-﻿﻿<nav class="sidebar sidebar-offcanvas" id="sidebar">
-    <ul class="nav">
-        <li class="nav-item nav-profile">
-            <a href="#" class="nav-link">
-                <div class="nav-profile-image">
-                    <img src="/PurpleAdmin-Free-Admin-Template-1.0.0/assets/images/faces/face1.jpg" alt="profile" />
-                    <span class="login-status online"></span>
-                    <!--change to offline or busy as needed-->
-                </div>
-                <div class="nav-profile-text d-flex flex-column">
-                    <span class="font-weight-bold mb-2">Gökay Kutluk</span>
-                    <span class="text-secondary text-small">Kafe Sahibi</span>
-                </div>
-                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
-            </a>
+﻿<nav class="sidebar sidebar-offcanvas" id="sidebar" style="background: #f8f9fa; min-height: 100vh; box-shadow: 2px 0 10px rgba(0,0,0,0.05);">
+    <ul class="nav flex-column">
+
+        <!-- Profil -->
+        <li class="nav-item nav-profile text-center py-4 border-bottom">
+            <img src="~/images/img_riva.jpg" alt="profile" class="rounded-circle mb-2" width="70" height="70">
+            <h6 class="fw-bold text-dark mb-0">Gökay Kutluk</h6>
+            <small class="text-muted">Kafe Sahibi</small>
         </li>
+
+        <!-- Menü Öğeleri -->
         <li class="nav-item">
-            <a class="nav-link" href="/Product/Index">
-                <span class="menu-title">Anasayfa</span>
-                <i class="mdi mdi-home menu-icon"></i>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/Admin/Category/Index/">
-                <span class="menu-title">Kategoriler</span>
-                <i class="mdi mdi-home menu-icon"></i>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/Admin/About/Index/">
-                <span class="menu-title">Hakkımızda</span>
-                <i class="mdi mdi-information-outline menu-icon"></i>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/Product/Index">
-                <span class="menu-title">Ürünler</span>
-                <i class="mdi mdi-home menu-icon"></i>
-            </a>
-        </li>
-       
-        <li class="nav-item">
-            <a class="nav-link" href="/Admin/Account/Index">
-                <span class="menu-title">Hakkımımzda</span>
-                <i class="mdi mdi-home menu-icon"></i>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/Admin/Blog/Index/">
-                <span class="menu-title">Blog</span>
-                <i class="mdi mdi-note-text menu-icon"></i>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/Admin/Adress/Index/">
-                <span class="menu-title">Adres</span>
-                <i class="mdi mdi-map-marker menu-icon"></i>
+            <a class="nav-link d-flex align-items-center px-4 py-3 text-dark" href="/Admin/Dashboard/Index">
+                <i class="mdi mdi-home fs-5 me-3 text-primary"></i>
+                <span>Anasayfa</span>
             </a>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link d-flex align-items-center px-4 py-3 text-dark" href="/Admin/Category/Index/">
+                <i class="mdi mdi-format-list-bulleted fs-5 me-3 text-success"></i>
+                <span>Kategoriler</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link d-flex align-items-center px-4 py-3 text-dark" href="/Admin/About/Index/">
+                <i class="mdi mdi-information-outline fs-5 me-3 text-warning"></i>
+                <span>Hakkımızda</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link d-flex align-items-center px-4 py-3 text-dark" href="/Product/Index">
+                <i class="mdi mdi-coffee fs-5 me-3 text-danger"></i>
+                <span>Ürünler</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link d-flex align-items-center px-4 py-3 text-dark" href="/Admin/Account/Index">
+                <i class="mdi mdi-account fs-5 me-3 text-info"></i>
+                <span>Hesabım</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link d-flex align-items-center px-4 py-3 text-dark" href="/Admin/Blog/Index/">
+                <i class="mdi mdi-note-text fs-5 me-3 text-secondary"></i>
+                <span>Blog</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link d-flex align-items-center px-4 py-3 text-dark" href="/Admin/Adress/Index/">
+                <i class="mdi mdi-map-marker fs-5 me-3 text-primary"></i>
+                <span>Adres</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link d-flex align-items-center px-4 py-3 text-dark" href="/Admin/Notification/Index/">
+                <i class="mdi mdi-email fs-5 me-3 text-danger"></i>
+                <span>Mesajlar</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link d-flex align-items-center px-4 py-3 text-dark" href="/Admin/Subcribe/Index">
+                <i class="mdi mdi-email fs-5 me-3 text-danger"></i>
+                <span>Aboneler</span>
+            </a>
+        </li>
     </ul>
 </nav>

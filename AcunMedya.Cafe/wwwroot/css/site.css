@@ -16,3 +16,31 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+<style >
+.fancy-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    color: white !important;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 16px;
+}
+
+.fancy-link i {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.fancy-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+}
+
+</style >

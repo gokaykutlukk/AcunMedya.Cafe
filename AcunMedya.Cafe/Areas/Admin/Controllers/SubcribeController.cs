@@ -1,61 +1,57 @@
 ﻿using AcunMedya.Cafe.Context;
 using AcunMedya.Cafe.Entities;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AcunMedya.Cafe.Areas.Admin.Controllers
 {
-    
-    [Area("Admin")]
-    public class AboutController : Controller
+
+    public class SubcribeController : Controller
     {
+
+
+       
         private readonly CafeContext _context;
 
-        public AboutController(CafeContext context)
+        public SubcribeController(CafeContext context)
         {
             _context = context;
         }
 
         public IActionResult Index()
         {
-            var value = _context.Abouts.ToList();
+            var value = _context.Subcribes.ToList();
             return View(value);
         }
-        public IActionResult AddAbout()
+        public IActionResult AddSubscries()
         {
 
             return View();
         }
         [HttpPost]
-        public IActionResult AddAbout(About p)
+        public IActionResult AddSubscribes(Subcribe p)
         {
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
-            _context.Abouts.Add(p);
+            _context.Subcribes.Add(p);
             _context.SaveChanges();
             return RedirectToAction("Index");
 
         }
-        public IActionResult DeleteAbout(int id)
+        public IActionResult DeleteSubscribes(int id)
         {
-            var value = _context.Abouts.Find(id);
-            _context.Abouts.Remove(value);
+            var value = _context.Subcribes.Find(id);
+            _context.Subcribes.Remove(value);
             _context.SaveChanges();
             return RedirectToAction("Index");
-
         }
 
-        public IActionResult UpdateAbout(int id)
+        public IActionResult UpdateSubscribes(int id)
         {
-            var value = _context.Abouts.Find(id);
+            var value = _context.Subcribes.Find(id);
             return View(value);
         }
         [HttpPost]
-        public IActionResult UpdateAbout(About p)
+        public IActionResult UpdateSubscribes(Subcribe p)
         {
-            _context.Abouts.Update(p);
+            _context.Subcribes.Update(p);
             _context.SaveChanges();
             return RedirectToAction("Index");
 

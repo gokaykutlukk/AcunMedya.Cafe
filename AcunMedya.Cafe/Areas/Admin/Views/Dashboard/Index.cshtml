@@ -1,0 +1,264 @@
+﻿@model List<AcunMedya.Cafe.Entities.Subcribe>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    var gokay = "https://learn.microsoft.com/tr-tr/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-9.0";
+}
+<link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title">
+                <span class="page-title-icon bg-gradient-primary text-white me-2">
+                    <i class="mdi mdi-home"></i>
+                </span> Anasayfa
+            </h3>
+            <nav aria-label="breadcrumb">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <a href="@gokay" target="_blank" class="fancy-link">
+                            <i class="mdi mdi-star-circle-outline me-1"></i>
+                            <span>Asp.Net Core Nedir</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-danger card-img-holder text-white">
+                    <div class="card-body">
+                        <img src="/PurpleAdmin-Free-Admin-Template-1.0.0/assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                        <h4 class="font-weight-normal mb-3">
+                            Ürün sayısı <i class="mdi mdi-chart-line mdi-24px float-end"></i>
+                        </h4>
+                        <h2 class="mb-5">@ViewBag.UrunSayisi</h2>
+                        <h6 class="card-text">Increased by 60%</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-info card-img-holder text-white">
+                    <div class="card-body">
+                        <img src="/PurpleAdmin-Free-Admin-Template-1.0.0/assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                        <h4 class="font-weight-normal mb-3">
+                            Referans Sayısı<i class="mdi mdi-bookmark-outline mdi-24px float-end"></i>
+                        </h4>
+                        <h2 class="mb-5">@ViewBag.ReferansSayisi</h2>
+                        <h6 class="card-text">Decreased by 10%</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-success card-img-holder text-white">
+                    <div class="card-body">
+                        <img src="/PurpleAdmin-Free-Admin-Template-1.0.0/assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
+                        <h4 class="font-weight-normal mb-3">
+                            Abone Sayısı <i class="mdi mdi-diamond mdi-24px float-end"></i>
+                        </h4>
+                        <h2 class="mb-5">@ViewBag.AboneSayisi</h2>
+                        <h6 class="card-text">Increased by 5%</h6>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <!-- Kahve Tatları Grafiği -->
+                <div class="col-md-6 stretch-card grid-margin">
+                    <div class="card bg-gradient-light text-dark">
+                        <div class="card-body">
+                            <h4 class="card-title">Kahve Tatları</h4>
+                            <canvas id="coffeeTasteChart" style="max-height: 300px;"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Müşteri Yorumları Grafiği -->
+                <div class="col-md-6 stretch-card grid-margin">
+                    <div class="card bg-gradient-light text-dark">
+                        <div class="card-body">
+                            <h4 class="card-title">Müşteri Yorumları</h4>
+                            <canvas id="customerFeedbackChart" style="max-height: 300px;"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        <div class="row">
+            <div class="col-12 grid-margin">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Recent Tickets</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th> Assignee </th>
+                                        <th> Subject </th>
+                                        <th> Status </th>
+                                        <th> Last Update </th>
+                                        <th> Tracking ID </th>
+                                    </tr>
+                                </thead>
+                               
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src="/PurpleAdmin-Free-Admin-Template-1.0.0/assets/images/faces/face1.jpg" class="me-2" alt="image"> @ViewBag.SenderName
+                                        </td>
+                                        <td> @ViewBag.Message </td>
+                                        <td>
+                                            <label class="badge badge-gradient-success">@ViewBag.Title</label>
+                                        </td>
+                                        <td> @ViewBag.Created </td>
+                                        <td> WD-12345 </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+        <div class="row">
+            <div class="col-12 grid-margin">
+                <div class="card shadow-sm border-0 rounded-4">
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold mb-4">
+                            <i class="fa fa-users text-primary me-2"></i> Son Aboneler
+                        </h4>
+
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Mail Adresi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td class="fw-semibold text-muted">@item.SubcribeId</td>
+                                            <td>@item.SubcribeMail</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <p class="text-muted small mt-3">
+                            Toplam <strong>@Model.Count()</strong> abone listelendi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- content-wrapper ends -->
+    <!-- partial:partials/_footer.html -->
+    <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2023 <a href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>. All rights reserved. Distributed by <a href="http://themewagon.com" target="_blank">ThemeWagon</a></span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
+        </div>
+    </footer>
+    <!-- partial -->
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctx = document.getElementById('coffeeTasteChart').getContext('2d');
+    var coffeeTasteChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Espresso', 'Latte', 'Cappuccino', 'Americano', 'Mocha'],
+            datasets: [{
+                label: 'Popülerlik (%)',
+                data: [25, 20, 15, 18, 22],
+                backgroundColor: [
+                    'rgba(85, 85, 255, 0.6)',
+                    'rgba(255, 99, 132, 0.6)',
+                    'rgba(255, 206, 86, 0.6)',
+                    'rgba(75, 192, 192, 0.6)',
+                    'rgba(153, 102, 255, 0.6)'
+                ],
+                borderColor: '#333',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: { beginAtZero: true }
+            }
+        }
+    });
+</script>
+
+<script>
+    var ctx2 = document.getElementById('customerFeedbackChart').getContext('2d');
+    var customerFeedbackChart = new Chart(ctx2, {
+        type: 'pie',
+        data: {
+            labels: ['Olumlu', 'Nötr', 'Olumsuz'],
+            datasets: [{
+                data: [65, 20, 15],
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.6)',  // olumlu
+                    'rgba(255, 206, 86, 0.6)',  // nötr
+                    'rgba(255, 99, 132, 0.6)'   // olumsuz
+                ],
+                borderColor: '#333',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+
+</script>
+    <style>
+        .fancy-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 16px;
+            background: linear-gradient(135deg, #ff6a00, #ee0979);
+            color: white !important;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 16px;
+        }
+
+            .fancy-link i {
+                font-size: 20px;
+                margin-right: 8px;
+            }
+
+            .fancy-link:hover {
+                transform: scale(1.05);
+                box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+                text-decoration: none;
+            }
+    </style>
+
+
