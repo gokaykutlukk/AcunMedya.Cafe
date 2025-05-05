@@ -1,10 +1,33 @@
-## ☕ AcunMedyaCafe – ASP.NET Core MVC Projesi
+# ☕ AcunMedyaCafe – ASP.NET Core MVC Projesi
 
-**AcunMedyaAkademi** bünyesinde, **Murat Yücedağ** önderliğinde ve değerli hocamız **Buse Nur Demirbaş** eşliğinde geliştirdiğim bu proje; modern web teknolojileriyle hazırlanmış, kullanıcı dostu bir **kafe tanıtım ve yönetim sistemi**dir.
+> **Gerçek dünya projelerine ilk adım!**  
+> Bu proje, bireysel ve kurumsal kullanım için temel teşkil edebilecek profesyonel bir kafe tanıtım uygulamasıdır.
 
-Kullanıcıların kafe hakkında bilgi alabileceği, video ve görsellerle desteklenen bir yapı sunar. MVC mimarisi ile katmanlı yapı oluşturularak profesyonel ve sürdürülebilir bir kod altyapısı hedeflenmiştir. <br/>
-Frontend tarafında responsive (mobil uyumlu) tasarım ilkelerine bağlı kalınarak, sade ama şık bir kullanıcı arayüzü geliştirilmiştir. <br/>
-Backend tarafında ise güçlü bir .NET mimarisiyle veri işlemleri ve içerik yönetimi kolaylaştırılmıştır. <br/>
+🎓 **AcunMedyaAkademi** çatısı altında,  
+🧠 **Murat Yücedağ** önderliğinde,  
+👩‍🏫 Değerli hocamız **Buse Nur Demirbaş** rehberliğinde geliştirildi.
+
+---
+
+## 🔍 Proje Hakkında
+
+🧩 **AcunMedyaCafe**, bir kafenin modern dijital yüzünü sunmak amacıyla geliştirilen; görseller, açıklamalar ve video destekli içerik yönetimi sağlayan bir web uygulamasıdır.
+
+- 🔁 **Katmanlı mimari** ile düzenli ve sürdürülebilir bir kod yapısı
+- 📱 **Mobil uyumlu arayüz** ile her cihazda sorunsuz deneyim
+- 🔐 Güçlü backend ile verilerin güvenli ve dinamik yönetimi
+
+> 🛠️ “Kodu değil, mimariyi yönet!” felsefesiyle yapılandırılmıştır.
+
+---
+
+## 📌 Özellikler
+
+✅ Kullanıcı dostu tasarım  
+✅ Kafe hakkındaki bilgilerin dinamik olarak görüntülenmesi  
+✅ Videolu tanıtım alanı  
+✅ Modern ve şık arayüz  
+✅ Admin paneline uygun alt yapı (ilerletilebilir)
 
 ---
 
