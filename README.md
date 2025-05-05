@@ -62,8 +62,8 @@
 ## 📁 Proje Yapısı
 
 - `Entities`: Veritabanı modelleri <br/>
-- `DataAccessLayer`: EF Core işlemleri <br/>
-- `BusinessLayer`: İş kuralları ve servis yapısı <br/>
+- `Controllers`: Kullanıcıdan gelen istekleri yönetiyor<br/>
+- `Entities`:  Veri modelleri burada tutuluyor <br/>
 - `PresentationLayer`: Kullanıcıya gösterilen arayüz (MVC) <br/>
 
 
