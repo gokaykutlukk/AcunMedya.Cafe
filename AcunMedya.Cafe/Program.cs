@@ -24,6 +24,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseStatusCodePagesWithReExecute("/Home/Error");
+
 app.UseAuthorization();
 
 app.MapControllerRoute(
